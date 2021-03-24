@@ -55,9 +55,13 @@
     font-size: 50px;
     color: #ffffff;
 }
+
 #carro1, #carro2, #carro3, #carro4{
+    width: 190px;
+    height: 100px;
+    object-fit: cover;
     position: absolute;
-    left: 200px;
+    left: 0;
     margin-top: 62px;
 }
 .chegada{
