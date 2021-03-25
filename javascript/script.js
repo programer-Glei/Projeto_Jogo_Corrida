@@ -10,6 +10,7 @@ var carro1 = [document.querySelector("#carro1"),document.querySelector("#carro2"
 carro1[0].style.left = '0px';
 carro1[1].style.left = '0px';
 carro1[2].style.left = '0px';
+carro1[3].style.left = '0px';
 
 botao.addEventListener("click", () =>{
     setCarro();
