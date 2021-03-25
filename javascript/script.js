@@ -2,11 +2,20 @@
 var carroCorrida = [];
 var game;
 var soma = randomize(10,20);
+var botao = document.querySelector("#botao");
 
-function iniciar(){
+
+var carro1 = [document.querySelector("#carro1"),document.querySelector("#carro2"),document.querySelector("#carro3"),document.querySelector("#carro4")];
+
+carro1[0].style.left = '0px';
+carro1[1].style.left = '0px';
+carro1[2].style.left = '0px';
+
+botao.addEventListener("click", () =>{
     setCarro();
-    console.log("cheguei")
-}
+    game = setInterval(moveImage, 100);
+})
+
 
 function carro(nome, imagem, velocidade){
     this.nome = nome;
@@ -27,11 +36,10 @@ function randomize(min, max){
 function moveImage(){
     soma1 = randomize(10,20);
     for(i=0; i<4; i++){
-        var carro = document.querySelector("#carro" + (i + 1));
-        carro.style.left = carroCorrida[i].velocidade + "px";
-        if(parseInt(carro.style.left.substr(0, carro.style.left.indexOf("px"))) >= 660){
+        carro1[i].style.left = (parseInt(carro1[i].style.left) + carroCorrida[i].velocidade) + 'px';
+        /*if(parseInt(carro.style.left.substr(0, carro.style.left.indexOf("px"))) >= 660){
             fim(i);
-        }
+        }*/
     }
 
     soma += soma1

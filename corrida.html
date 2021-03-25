@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/corrida.css">
-    <script src="javascript/script.js"></script>
     <title>Corrida</title>
 </head>
 <body>
     <div class="jogo">
         <div class="menu-botoes">
             <a href="corrida.html">Nova corrida</a>
-            <a href="" onclick="iniciar()">Iniciar</a>
+            <a href="#" id="botao">Iniciar</a>
             <a href="index.html">Menu</a>
         </div>
         <div class="pistas">
@@ -50,9 +49,6 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        var crono = setInterval(function(){moveImage()},100)
-        var tempo = setCarro();
-    </script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
