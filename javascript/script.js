@@ -35,17 +35,17 @@ function randomize(min, max){
 }
 
 function moveImage(){
-    soma1 = randomize(10,20);
     for(i=0; i<4; i++){
         carro1[i].style.left = (parseInt(carro1[i].style.left) + carroCorrida[i].velocidade) + 'px';
-        /*if(parseInt(carro.style.left.substr(0, carro.style.left.indexOf("px"))) >= 660){
-            fim(i);
-        }*/
+        console.log(parseInt(carro1[1].style.left))
+        if( parseInt(carro1[i].style.left) >= 1380){
+            var vencedor = carroCorrida[i].nome
+            fim(vencedor);
+        }
     }
-
-    soma += soma1
 }
 
 function fim(vencedor){
-    alert("acabou")
+    clearInterval(game);
+    alert("O "+vencedor+" venceu")
 }
