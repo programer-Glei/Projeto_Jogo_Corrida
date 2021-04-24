@@ -3,6 +3,7 @@ var carroCorrida = [];
 var game;
 var soma = randomize(10,20);
 var botao = document.querySelector("#botao");
+var btn_comeca = document.querySelector("#btn-ini")
 var modal = document.querySelector('.modal-overaly')
 
 
@@ -17,6 +18,11 @@ botao.addEventListener("click", () =>{
     setCarro();
     modal.classList.add('visivel')
     //game = setInterval(moveImage, 100);
+})
+
+btn_comeca.addEventListener("click", () =>{
+    modal.classList.remove('visivel')
+    game = setInterval(moveImage, 100);
 })
 
 
