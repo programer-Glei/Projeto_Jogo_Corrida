@@ -6,6 +6,7 @@ var botao = document.querySelector("#botao");
 var btn_comeca = document.querySelector("#btn-ini")
 var modal = document.querySelector('.modal-overaly')
 var carro_selecionado;
+var carros_cores = ["Carro Verde","Carro Vermelho","Carro Amarelo","Carro Laranja"]
 
 
 var carro1 = [document.querySelector("#carro1"),document.querySelector("#carro2"),document.querySelector("#carro3"),document.querySelector("#carro4")];
@@ -51,7 +52,7 @@ function moveImage(){
         console.log(parseInt(carro1[1].style.left))
         if( parseInt(carro1[i].style.left) >= 1380){
             var vencedor = i
-            var nome = carroCorrida[i].nome
+            var nome = carros_cores[i]
             fim(vencedor,nome);
         }
     }
@@ -62,6 +63,6 @@ function fim(vencedor,nome){
     if(vencedor == carro_selecionado){
         alert("O "+nome+" venceu, você acertou viséravi")
     }else{
-        alert("O "+vencedor+" venceu, tenta outra vez otário")
+        alert("O "+nome+" venceu, tenta outra vez otário")
     }
 }
